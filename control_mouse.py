@@ -273,7 +273,7 @@ while cap.isOpened():
                         pyautogui.mouseUp(button = "left")
                         prev_state = Gest.MOUSE_UP
                         Controller.grabflag = False
-                    else:
+                    elif prev_state != Gest.LEFT_CLICK:
                         prev_state = Gest.LEFT_CLICK
                         pyautogui.click(clicks=1)   # 한번만 클릭
                         print("검지 클릭")
