@@ -45,6 +45,7 @@ ffmpeg_path = r"C:\ffmpeg\bin\ffmpeg.exe"
 # 환경 변수에 FFmpeg 경로 추가
 os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 ```
+
 ### Installing
 
 pip 명령어를 사용하여 필요 패키지를 다운로드
@@ -54,37 +55,89 @@ pip install ~~~
 ```
 ### Running
 상시 wake word를 듣는 프로그램을 실행시킵니다.
-```
+```sh
 python open_wake_word.py
 ```
+>*만약 라즈베리파이 보드 환경에서 사용중이라면, socket 통신을 위한 server, client 프로그램을 실행시킵니다.*
+>```sh
+># 보드 환경에서 server 실행
+>python server.py
+># pc 환경에서 client 실행
+>python client.py
+>```
 
+이후 원하는 동작을 실행시키는 wake word 를 말합니다.
+```sh
+# 제어 프로그램 실행 (마우스 제어 프로그램)
+"hi gram"
 
-## Break down into end to end tests
+# 키보드 제어 프로그램 실행
+"type gram"
 
-Explain what these tests test and why
-
+# 제어 프로그램 종료
+"bye bye"
 ```
-Give an example
-```
+## Use Example
 
 
+이 프로젝트는 음성 명령과 손 동작을 인식하여 다양한 작업을 수행할 수 있도록 돕습니다. 아래는 사용 방법의 예제입니다.
 
+1. **시작 준비**
+   - "hi gram"이라고 말하여 시스템을 활성화합니다.
+
+2. **손 동작 인식**
+   - 캠을 향해 손을 움직이며 마우스를 조작합니다.
+   - [손 동작 예시 이미지 삽입 예정]
+
+3. **텍스트 입력 준비**
+   - "type gram"이라고 말하여 텍스트 입력 모드를 활성화합니다.
+
+4. **브라우저 탭 전환**
+   - "브라우저 2번째 탭으로 가줘"라고 말하여 브라우저의 두 번째 탭으로 이동합니다.
+
+5. **검색 준비**
+   - 다시 "type gram"이라고 말하여 텍스트 입력 모드를 준비합니다.
+
+6. **검색 수행**
+   - "역삼역 맛집 검색해"라고 말하여 검색을 수행합니다.
+
+7. **마우스 클릭**
+   - 손을 움직이며 마우스를 조작하여 버튼을 클릭합니다.
+   - [마우스 클릭 예시 이미지 삽입 예정]
+
+이러한 과정을 통해 음성과 손 동작을 활용하여 직관적으로 시스템을 제어할 수 있습니다.
+
+## Developer
+
+  <table>
+  <tr>
+  <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/88da96ce-a1ff-4d1e-9640-55dbc64dd6f9" alt="Alt text" width="80px" /> </td>
+  <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/d3b53f06-b0eb-4860-8e28-e9e01a66348b" alt="Alt text" width="80px" /> </td>
+  <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/f5e72b8f-eada-4f29-a1b4-dbfd659dc513" alt="Alt text" width="80px" /> </td>
+  <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/b47e2838-5153-47a3-b79c-a3fde6d9b8f4" alt="Alt text" width="80px" /> </td>
+  </tr>
+  <tr>
+  <td  style="width: 70px;">
+      <a href="https://github.com/shaqok">
+      <sub><img src="https://img.shields.io/badge/김대연-ffffff?style=for-the-badge&logo=github&logoColor=black"></sub></a>
+   </td><td  style="width: 70px;">
+      <a href="https://github.com/seastark87">
+      <sub><img src="https://img.shields.io/badge/김해성-ffffff?style=for-the-badge&logo=github&logoColor=black"></sub></a>
+   </td><td  style="width: 70px;">
+      <a href="https://github.com/hexaspace">
+      <sub><img src="https://img.shields.io/badge/이도연-ffffff?style=for-the-badge&logo=github&logoColor=black"></sub></a>
+   </td>
+  <td  style="width: 70px;">
+      <a href="https://github.com/hangyeolhong">
+      <sub><img src="https://img.shields.io/badge/홍한결-ffffff?style=for-the-badge&logo=github&logoColor=black"></sub></a>
+   </td>
+  </tr>
+  </table>
 <!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+
 [python]: https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white
 [flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
 [naver]: https://img.shields.io/badge/CLOVA-03C75A?style=flat-square&logo=naver&logoColor=white
 [googlegemini]: https://img.shields.io/badge/GEMINI-8E75B2?style=flat-square&logo=googlegemini&logoColor=white
 [socketdotio]: https://img.shields.io/badge/Socket-010101?style=socketdotio-square&logo=socketdotio&logoColor=white
-[flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
 
-[flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
-[flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
-[flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
-[flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
-[flask]: https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white
