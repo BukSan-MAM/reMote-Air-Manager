@@ -51,7 +51,7 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 pip 명령어를 사용하여 필요 패키지를 다운로드
 
 ```
-pip install ~~~
+pip install -r requirements.txt
 ```
 ### Running
 상시 wake word를 듣는 프로그램을 실행시킵니다.
@@ -114,7 +114,7 @@ python open_wake_word.py
   <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/88da96ce-a1ff-4d1e-9640-55dbc64dd6f9" alt="Alt text" width="80px" /> </td>
   <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/d3b53f06-b0eb-4860-8e28-e9e01a66348b" alt="Alt text" width="80px" /> </td>
   <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/f5e72b8f-eada-4f29-a1b4-dbfd659dc513" alt="Alt text" width="80px" /> </td>
-  <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/b47e2838-5153-47a3-b79c-a3fde6d9b8f4" alt="Alt text" width="80px" /> </td>
+  <td style="width: 50px;"><img src="https://github.com/user-attachments/assets/c6a96288-bc5b-450f-a82b-4621a99d3f04" alt="Alt text" width="80px" /> </td>
   </tr>
   <tr>
   <td  style="width: 70px;">
