@@ -121,12 +121,12 @@ if __name__ == "__main__":
                 subprocess.run(['python3', 'command_manager.py', 'on'])
                 isAirControllerOn = True
             # turn off mouse controller
-            if mdl == 'type_gram' and scores[-1] >= 0.7 and isAirControllerOn:
+            if mdl == 'bye_bye' and scores[-1] >= 0.7 and isAirControllerOn:
                 subprocess.run(['python3', 'command_manager.py', 'off'])
                 # send 'turn off'
                 isAirControllerOn = False
             # wake keyboard controller
-            if mdl == 'bye_bye' and scores[-1] >= 0.7 and isAirControllerOn:
+            if mdl == 'type_gram' and scores[-1] >= 0.7 and isAirControllerOn:
                 # to erase, temp code
                 import time
                 curr_listen_time = int(time.time())
