@@ -298,7 +298,7 @@ while cap.isOpened():
                 pass                
 
     # comment out the line below if you don't want to show the webcam image
-    cv2.imshow("Gesture Recognition", frame)
+    cv2.imshow("reMote Air Manager", frame)
 
     if cv2.waitKey(10) & 0xFF == ord('q'):
         break
