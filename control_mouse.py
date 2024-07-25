@@ -233,8 +233,9 @@ while cap.isOpened():
                     and is_two_point_adj(mid_tip.x, thumb_tip.x) and is_two_point_adj(mid_tip.y, thumb_tip.y) \
                     and is_two_point_adj(mid_tip.x, index_tip.x) and is_two_point_adj(mid_tip.y, index_tip.y) \
                     and islower(ring_tip.y, ring_mid.y) and islower(pinky_tip.y, pinky_mid.y) and islower(thumb_tip.x, thumb_ip.x):
-                    pyautogui.click(button='right', clicks=1)   # 한번만 클릭
-                    print("중지 우클릭")
+                    if prev_state != Gest.RIGHT_CLICK:
+                        pyautogui.click(button='right', clicks=1)   # 한번만 클릭
+                        print("중지 우클릭")
                     prev_state = Gest.RIGHT_CLICK
                     print(f'DEBUG) 손크기 {get_dist_two_points(thumb_mid_pos, pinky_tip_pos)} 검지거리 {index_tip.y- thumb_tip.y} 중지거리 {mid_tip.y- thumb_tip.y} ADG {Controller.scale_adj_range}')
                 # 커서 이동
