@@ -44,9 +44,11 @@ PYAUTOGUI_KEYBOARD_KEYS = ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', 
 'up', 'volumedown', 'volumemute', 'volumeup', 'win', 'winleft', 'winright', 'yen',
 'command', 'option', 'optionleft', 'optionright']
 
+
 def is_korean(text):
     # 한글 유니코드 범위: 0xAC00-0xD7AF
     return bool(re.search(r'[\uAC00-\uD7AF]', text))
+
 
 def is_english(text):
     # 영어 알파벳 범위: a-z, A-Z
@@ -140,22 +142,31 @@ class EffectSoundClient:
     end_sound = pygame.mixer.Sound('./sound/end.wav')
     success_sound = pygame.mixer.Sound('./sound/success.mp3')
     fail_sound = pygame.mixer.Sound('./sound/fail.wav')
+
+
     def play_start_sound(self):
         self.start_sound.play()
         # time.sleep(2)
+
+
     def play_end_sound(self):
         self.end_sound.play()
         # time.sleep(2)
+
+
     def play_success_sound(self):
         self.success_sound.play()
         # time.sleep(2)
         # Pygame 믹서 종료
         pygame.mixer.quit()
+
+
     def play_fail_sound(self):
         self.fail_sound.play()
         # time.sleep(1.9)
         # Pygame 믹서 종료
         pygame.mixer.quit()
+
 
 if __name__ == '__main__':
     # FFmpeg 경로 설정
